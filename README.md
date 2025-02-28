@@ -42,7 +42,9 @@ An Azure Functions–based solution that automates the **deallocation and startu
        "AZURE_SUBSCRIPTION_ID": "<your-subscription-id>",
        "RESOURCE_GROUP": "<your-resource-group>",
        "SHUTDOWN_TAG": "AutoShutdown",
+       "SHUTDOWN_TAG_VALUE": "true",
        "START_TAG": "AutoStart",
+       "START_TAG_VALUE": "true"
        "EXCLUDED_VMS": "critical-vm1,critical-vm2"
      }
    }
