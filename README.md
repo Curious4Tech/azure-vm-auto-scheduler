@@ -92,8 +92,8 @@ You can also use VS code to deploy it easily.
 2️⃣ **Set Environment Variables**  
    - In **Azure Portal**, go to your **Function App** → **Configuration**.  
    - Add the required **Application Settings**:  
-     - `AZURE_SUBSCRIPTION_ID`
-     - `RESOURCE_GROUP`
+     - `AZURE_SUBSCRIPTION_ID=your-subscription-id`
+     - `RESOURCE_GROUP=your-resource-group`
      -  `SHUTDOWN_TAG_VALUE=true`
      - `SHUTDOWN_TAG=AutoShutdown`
      - `START_TAG=AutoStart`
