@@ -24,7 +24,7 @@ An Azure Functions–based solution that automates the **deallocation and startu
 
 1. **Clone the Repository:**  
    ```bash
-   git clone <repository-url> && cd <repository-directory>
+   git clone https://github.com/Curious4Tech/azure-vm-auto-scheduler.git && cd azure-vm-auto-scheduler/my-vm-automation-function-app
    ```
 
 2. **Install Dependencies:**  
