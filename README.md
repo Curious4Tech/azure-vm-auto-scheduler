@@ -1,7 +1,7 @@
 # azure-vm-auto-scheduler
 Azure VM Auto-Scheduler is a serverless automation solution using Azure Functions to optimize cloud costs by automatically shutting down and starting VMs based on tagging. It ensures non-critical VMs are deallocated when idle and restarted when needed, using a timer trigger and managed identity authentication. 
 
-```markdown
+
 # Azure VM Auto-Scheduler
 
 An Azure Functions–based solution that automates the **deallocation and startup** of **non-critical VMs** based on tagging, optimizing cloud costs and resource availability.
@@ -81,7 +81,3 @@ An Azure Functions–based solution that automates the **deallocation and startu
 
 Fork, improve, and submit a pull request. For major changes, open an issue first.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
