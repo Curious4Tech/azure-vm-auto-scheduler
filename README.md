@@ -56,6 +56,7 @@ An Azure Functions–based solution that automates the **deallocation and startu
    ```bash
    func azure functionapp publish <YourFunctionAppName>
    ```
+You can also use VS code to deploy it easily.
 
 2. **Monitor Logs:**  
    Use the **Azure Portal** or **Azure Functions Core Tools** to track execution.
@@ -73,6 +74,71 @@ An Azure Functions–based solution that automates the **deallocation and startu
   - `AutoShutdown=true` to be deallocated.
   - `AutoStart=true` to be restarted.
 
+
+
+### **Quick Steps to Test in Azure Portal** 🚀  
+
+1️⃣ **Deploy the Function App**  
+   - Navigate to **Azure Portal** → **Function Apps**  
+   - Click **Create** and configure your **Function App** (Python runtime).  
+   - Deploy the project using:  
+     ```bash
+     func azure functionapp publish <YourFunctionAppName>
+     ```
+![image](https://github.com/user-attachments/assets/6781257b-6720-4e04-984c-2af24390971c)
+
+2️⃣ **Set Environment Variables**  
+   - In **Azure Portal**, go to your **Function App** → **Configuration**.  
+   - Add the required **Application Settings**:  
+     - `AZURE_SUBSCRIPTION_ID`
+     - `RESOURCE_GROUP`
+     -  `SHUTDOWN_TAG_VALUE=true`
+     - `SHUTDOWN_TAG=AutoShutdown`
+     - `START_TAG=AutoStart`
+     - `START_TAG_VALUE=true`
+     - `EXCLUDED_VMS=critical-vm1,critical-vm2`  
+   - Click **Apply**.
+
+![image](https://github.com/user-attachments/assets/0f2e76d1-5375-498a-9c99-65a61a61ef0d)
+
+
+3️⃣ **Assign Managed Identity Permissions**  
+   - In **Function App** → **Identity**, enable **System Assigned Identity**.  
+   - Grant **Virtual Machine Contributor** role to the Function App for your resource group.
+
+![image](https://github.com/user-attachments/assets/7e0ee63f-62b2-40d4-bf0e-e7e7123bcb4e)
+
+
+4️⃣ **Run the Function Manually**  
+   - In **Azure Portal**, open **Function App** → **Functions**.  
+   - Select **deallocate_vms** or **start_vms**.  
+   - Click **Run** to execute the function.
+
+![image](https://github.com/user-attachments/assets/f8d5173e-be9a-4926-96eb-55a95c046294)
+
+
+5️⃣ **Check Logs & Results**  
+   - Open **Monitor** → **Logs** to verify VM actions.
+
+![image](https://github.com/user-attachments/assets/d3600cbb-8aa8-4e87-8a0d-10a7e4039b20)
+
+   - You should see in your vms all the deallocated vms.
+
+![image](https://github.com/user-attachments/assets/fc12e735-1bb6-466f-8529-1a32d15e284a)
+
+   - Same process for testing the startup function
+
+![image](https://github.com/user-attachments/assets/e511fedb-6581-44c9-8eef-70dbccad6827)
+
+   - Now all your vms will be runing again
+
+![image](https://github.com/user-attachments/assets/fa8f5fec-1f6d-4fd7-81d5-dbab3bd7dc03)
+
+
+   - Ensure VMs tagged with `AutoShutdown=true` are stopped and `AutoStart=true` are started.
+   
+
+✅ **Done!** Your Azure Function is now managing VMs automatically! 🚀
 ## Troubleshooting
 
 - **Check Environment Variables:** Ensure correct values in **Azure Function App settings**.  
