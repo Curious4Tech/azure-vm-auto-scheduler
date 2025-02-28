@@ -39,6 +39,8 @@ An Azure Functions–based solution that automates the **deallocation and startu
    {
      "IsEncrypted": false,
      "Values": {
+       "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+       "FUNCTIONS_WORKER_RUNTIME": "python",
        "AZURE_SUBSCRIPTION_ID": "<your-subscription-id>",
        "RESOURCE_GROUP": "<your-resource-group>",
        "SHUTDOWN_TAG": "AutoShutdown",
