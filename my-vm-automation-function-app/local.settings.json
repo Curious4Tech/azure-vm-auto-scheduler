@@ -4,13 +4,13 @@
       "AzureWebJobsStorage": "UseDevelopmentStorage=true",
       "FUNCTIONS_WORKER_RUNTIME": "python",
       
-      "AZURE_SUBSCRIPTION_ID": "740d2757-b717-42c4-be32-2c197135a7bd",
-      "RESOURCE_GROUP": "Azure-Cost-Saving-RG",
-      
+      "AZURE_SUBSCRIPTION_ID": "<your-subscription-id>",
+      "RESOURCE_GROUP": "<your-resource-group>",
+        
       "START_TAG": "AutoStart",
       "START_TAG_VALUE": "true",
       "SHUTDOWN_TAG": "AutoShutdown",
       "SHUTDOWN_TAG_VALUE": "true",
-      "EXCLUDED_VMS": "critical-vm"
+      "EXCLUDED_VMS": "critical-vm1,critical-vm2,critical-vm3"
     }
   }
