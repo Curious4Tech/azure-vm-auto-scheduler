@@ -1,0 +1,16 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+      "FUNCTIONS_WORKER_RUNTIME": "python",
+      
+      "AZURE_SUBSCRIPTION_ID": "740d2757-b717-42c4-be32-2c197135a7bd",
+      "RESOURCE_GROUP": "Azure-Cost-Saving-RG",
+      
+      "START_TAG": "AutoStart",
+      "START_TAG_VALUE": "true",
+      "SHUTDOWN_TAG": "AutoShutdown",
+      "SHUTDOWN_TAG_VALUE": "true",
+      "EXCLUDED_VMS": "critical-vm"
+    }
+  }
